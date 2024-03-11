@@ -25,4 +25,17 @@ body {
   }
   img {
     background-color: rgb(64, 64, 250);
+    border-top-left-radius: 15px;
+    border-top-right-radius:15px;
+  }
+  
+  figcaption {
+    text-align: center;
+    border: 2px solid rgb(161, 161, 241);
+    margin-top:-5px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    background-color: rgb(255, 251, 246);
+    
+    
   }
