@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>2nd assignment - animations
+    </title>
+    <style>
+        #rectangle{
+            width:800px; 
+            height:600px; 
+            background-color: #050210;
+            margin:30px auto;
+
+            }
+        #circle0{
+            border-radius:50%;
+            width: 400px; 
+            height:400px;
+            transform:translate(200px,100px)
+        }
+        #circle1{
+            border-radius:50%;
+            width: 400px; 
+            height:400px;
+            background: linear-gradient(#fb5dad, #55fb9f,#b97aff);
+            box-shadow: 30px 0px 60px 1px #55fba050,
+                        -30px 0px 60px 1px#55fba050,
+                        0px 30px 60px 1px #b87aff70,
+                        0px -30px 60px 1px #fb5dac70;
+            animation-name: rotating-animation;
+            animation-duration: 1.3s;
+            animation-iteration-count: infinite;
+            animation-timing-function:linear;
+            filter:blur(1px) opacity(90%);
+        }
+        #circle2{
+            background-color: #050210;
+            border-radius:50%;
+            width: 350px; 
+            height:350px;
+            transform:translate(25px,25px);
+        }
+        #circle3{
+            transform:translate(175px, 175px);
+            background-color:#b97aff;
+            border-radius:50%;
+            width: 1px; 
+            height: 1px;
+            animation-name:boom-animation;
+            animation-duration:1.3s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-out /*cubic-bezier(0.5, 0.4, 0.3, -0.10)*/;
+        }
+        @keyframes boom-animation {
+            0% { transform-origin:0 0 0; opacity:10%;}
+            100% {transform: scale(350,350); transform-origin:0 0 0; opacity:5%}
+        }
+        @keyframes rotating-animation{
+            0%{transform:rotate(0deg);}
+            100%{transform:rotate(360deg);}
+        }
+     </style>
+</head>
+
+<body>
+    <div id="rectangle">
+        <div id="circle0">
+            <div id="circle1">
+                <div id="circle2">
+                    <div id="circle3">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+</html>
